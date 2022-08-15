@@ -11,8 +11,8 @@ $weather = new weather();
     <!--favicon-->
 
     <!--css-->
-    <link rel="stylesheet" href="static/css/reset.css">
-    <link rel="stylesheet" href="static/css/chart.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/chart.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <!--script-->
@@ -33,7 +33,7 @@ $weather = new weather();
 <body onload=printUpdate(); style="background: #f3f3f3;">
 <div class="container-fluid">
     <div class="row" style="height: 80px; background-color: #f08300; margin-bottom: 10px;">
-        <div class="col-1" style="line-height: 80px;"><img src="static/asset/images/s-images/ba_w.png" alt="BA_logo"></div>
+        <div class="col-1" style="line-height: 80px;"><img src="asset/images/s-images/ba_w.png" alt="BA_logo"></div>
         <div class="col-9"><h2 style="line-height: 80px; color: white; font-weight: bold; margin-left: -40px;">배터리 세이프티 박스 관제 모니터링</h2></div>
         <div class="col-1" style="color: #fff; text-align: center; margin-top: 4px;">
             <p style="margin-bottom: -4px;"><?php echo $weather->getStatus(); ?></p>
@@ -224,7 +224,7 @@ $weather = new weather();
 
     var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
-    var imageSrc = 'static/asset/images/s-images/bsb_tesla.png', // 마커이미지의 주소입니다
+    var imageSrc = 'asset/images/s-images/bsb_tesla.png', // 마커이미지의 주소입니다
         imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
         imageOption = {offset: new kakao.maps.Point(0, 0)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
 
