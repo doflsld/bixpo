@@ -35,10 +35,10 @@ $weather = new weather();
     <div class="row" style="height: 80px; background-color: #f08300; margin-bottom: 10px;">
         <div class="col-1" style="line-height: 80px;"><img src="asset/images/s-images/ba_w.png" alt="BA_logo"></div>
         <div class="col-9"><h2 style="line-height: 80px; color: white; font-weight: bold; margin-left: -40px;">배터리 세이프티 박스 관제 모니터링</h2></div>
-        <div class="col-1" style="color: #fff; text-align: center; margin-top: 4px;">
-            <p style="margin-bottom: -4px;"><?php echo $weather->getStatus(); ?></p>
-            <span style="margin-bottom: -4px;"><?php echo $weather->getTemp(); ?>℃</span>
-            <span><?php echo $weather->getHumi(); ?>%</span>
+        <div class="col-1" style="color: #fff; text-align: center; margin-top: 18px;">
+            <p style="margin-bottom: -4px;" id="api_weather"></p>
+            <span id="api_temp" style="margin-bottom: -4px;"></span>
+            <span id="api_humi"></span>
         </div>
         <div class="col-1" id="clock" style="color: #fff; text-align: center; margin-top: 18px;">
             <p style="margin-bottom: -4px;">{{date}}</p>
@@ -62,7 +62,7 @@ $weather = new weather();
                     </div>
                     <div class="row" style="text-align: center;  float: none; margin:100 auto;">
                         <div class="card bg-light mb-2 shadow p-3 mb-5 bg-white rounded" style="max-width: 13rem; float: none; margin:0 auto;">
-                            <div class="card-header">#001</div>
+                            <div class="card-header">BSB-LM-T-001</div>
                             <div class="card-body">
                                 <h5 class="card-title" >온도</h5>
                                 <p class="card-text" id="temp-1">20℃</p>
@@ -71,7 +71,7 @@ $weather = new weather();
                             </div>
                         </div>
                         <div class="card bg-light mb-2 shadow p-3 mb-5 bg-white rounded" style="max-width: 13rem; float: none; margin:0 auto;">
-                            <div class="card-header">#002</div>
+                            <div class="card-header">BSB-LM-T-002</div>
                             <div class="card-body">
                                 <h5 class="card-title">온도</h5>
                                 <p class="card-text" id="temp-2">20℃</p>
@@ -80,7 +80,7 @@ $weather = new weather();
                             </div>
                         </div>
                         <div class="card bg-light mb-2 shadow p-3 mb-5 bg-white rounded" style="max-width: 13rem; float: none; margin:0 auto;">
-                            <div class="card-header">#003</div>
+                            <div class="card-header">BSB-LM-T-003</div>
                             <div class="card-body">
                                 <h5 class="card-title">온도</h5>
                                 <p class="card-text" id="temp-3">20℃</p>
@@ -89,7 +89,7 @@ $weather = new weather();
                             </div>
                         </div>
                         <div class="card bg-light mb-2 shadow p-3 mb-5 bg-white rounded" style="max-width: 13rem; float: none; margin:0 auto;">
-                            <div class="card-header">#004</div>
+                            <div class="card-header">BSB-LM-T-004</div>
                             <div class="card-body">
                                 <h5 class="card-title">온도</h5>
                                 <p class="card-text" id="temp-4">20℃</p>
@@ -98,7 +98,7 @@ $weather = new weather();
                             </div>
                         </div>
                         <div class="card bg-light mb-2 shadow p-3 mb-5 bg-white rounded" style="max-width: 13rem; float: none; margin:0 auto;">
-                            <div class="card-header">#005</div>
+                            <div class="card-header">BSB-LM-G-001</div>
                             <div class="card-body">
                                 <h5 class="card-title">CO</h5>
                                 <p class="card-text" id="co2_val">0.00ppm</p>
@@ -126,50 +126,50 @@ $weather = new weather();
                                 <thead class="table-light">
                                 <tr>
                                     <th scope="col">No</th>
-                                    <th scope="col">Issue</th>
+                                    <th scope="col">Device</th>
                                     <th scope="col">Err Code</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <th scope="row">- </th>
-                                    <td>-</td>
-                                    <td>-</td>
+                                    <th scope="row">1</th>
+                                    <td>BSB-LM-T-001</td>
+                                    <td>Warning Temp</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">-</th>
-                                    <td>-</td>
-                                    <td>-</td>
+                                    <th scope="row">2</th>
+                                    <td>BSB-LM-T-001</td>
+                                    <td>Warning Temp</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">-</th>
-                                    <td>-</td>
-                                    <td>-</td>
+                                    <th scope="row">3</th>
+                                    <td>BSB-LM-G-001</td>
+                                    <td>Warning Gas-CO</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">-</th>
-                                    <td>-</td>
-                                    <td>-</td>
+                                    <th scope="row">4</th>
+                                    <td>BSB-LM-T-003</td>
+                                    <td>Warning Temp</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">-</th>
-                                    <td>-</td>
-                                    <td>-</td>
+                                    <th scope="row">5</th>
+                                    <td>BSB-LM-T-001</td>
+                                    <td>Warning Temp</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">-</th>
-                                    <td>-</td>
-                                    <td>-</td>
+                                    <th scope="row">6</th>
+                                    <td>BSB-LM-T-002</td>
+                                    <td>Warning Temp</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">-</th>
-                                    <td>-</td>
-                                    <td>-</td>
+                                    <th scope="row">7</th>
+                                    <td>BSB-LM-T-002</td>
+                                    <td>Warning Temp</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">-</th>
-                                    <td>-</td>
-                                    <td>-</td>
+                                    <th scope="row">8</th>
+                                    <td>BSB-LM-T-004</td>
+                                    <td>Network Delay</td>
                                 </tr>
 
                                 </tbody>
