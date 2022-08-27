@@ -285,12 +285,12 @@
 }
 
 .status{
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     box-shadow: 0px 5px 10px 0px lightgrey;
-    font-size: x-large;
-    padding: 30px;
+    font-size: 40px;
+    padding-top: 38px;
 }
 .normal{border: 10px solid #2CB86D;}
 .caution{border: 10px solid #F49D34;}

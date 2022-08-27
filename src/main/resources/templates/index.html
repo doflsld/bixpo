@@ -88,43 +88,41 @@
             </nav>
             <!-- Navbar End -->
 
-            <div class="text-center">
-                <div class="d-inline-grid w-40">
+            <div class="text-center" style="width: 86.5vw; height: 93vh;">
+                <div class="d-inline-grid w-40 h-100 pb-4">
                     <div class="container-fluid pt-4 px-4">
-                        <div class="bg-primary rounded p-4">
-                            <div class="text-start">
-                                <h5 class="d-inline-grid text-secondary">사용 후 배터리 분류 프로세스</h5>
-                                <img class="d-inline-grid pt-4 ms-4 w-55" src="../asset/images/s-images/process.png">
-                            </div>
+                        <div class="bg-primary rounded p-4 text-start" style="height: 85.5vh;">
+                                <h4 class="d-inline-grid text-secondary w-100">사용 후 배터리 분류 프로세스</h4>
+                                <img class="d-inline-grid pt-4 ms-4 w-50 my-4" src="../asset/images/s-images/process.png">
                         </div>
                     </div>
                 </div>
-                <div class="d-inline-grid w-55">
-                    <div class="container-fluid px-4">
-                        <div class="bg-primary rounded p-4" style="height: 17.75rem;">
+                <div class="d-inline-grid w-55 h-100 pb-4">
+                    <div class="container-fluid p-4">
+                        <div class="bg-primary rounded p-4 h-100">
                             <div class="text-start">
-                                <h5 class="d-inline-grid text-secondary">보관 중인 사용 후 배터리 상태 확인</h5>
+                                <h4 class="d-inline-grid text-secondary">보관 중인 사용 후 배터리 상태 확인</h4>
                             </div>
-                            <div class="d-inline-grid mx-4 mt-4">
-                                <div class="status normal fw-bolder">000</div>
-                                <h6 class="text-black-50 mt-4">안전배터리</h6>
-                            </div>
-                            <div class="d-inline-grid mx-4 mt-4">
-                                <div class="status caution fw-bolder">000</div>
-                                <h6 class="text-black-50 mt-4">주의배터리</h6>
-                            </div>
-                            <div class="d-inline-grid mx-4 mt-4">
-                                <div class="status warning fw-bolder">000</div>
-                                <h6 class="text-black-50 mt-4">위험배터리</h6>
-                            </div>
-                        </div>
+                                <div class="d-inline-grid mx-4 mt-5">
+                                    <div class="status normal fw-bolder">000</div>
+                                    <h5 class="text-black-50 mt-5">안전배터리</h5>
+                                </div>
+                                <div class="d-inline-grid mx-4 mt-5">
+                                    <div class="status caution fw-bolder">000</div>
+                                    <h5 class="text-black-50 mt-5">주의배터리</h5>
+                                </div>
+                                <div class="d-inline-grid mx-4 mt-5">
+                                    <div class="status warning fw-bolder">000</div>
+                                    <h5 class="text-black-50 mt-5">위험배터리</h5>
+                                </div>
+                         </div>
                     </div>
-                    <div class="container-fluid pt-4 px-4">
-                        <div class="bg-primary rounded p-4" style="height: 17.75rem;">
+                    <div class="container-fluid p-4">
+                        <div class="bg-primary rounded p-4 h-100">
                             <div class="text-start">
                                 <h5 class="d-td-inline-grid text-secondary">배터리 진단 후 안전 배터리 비율 (AI 분석 기반)</h5>
                             </div>
-                            <div id="chart_div" style="width: 100%; height: 220px;"></div>
+                            <div id="chart_div"></div>
                         </div>
                     </div>
                 </div>
@@ -225,7 +223,8 @@
             var options = {
                 vAxis: {minValue: 0},
                 legend : 'none',
-                series: {0:{lineWidth: 1, pointSize:4, color: '#EF7B00', pointShape:'circle'}}
+                series: {0:{lineWidth: 1, pointSize:4, color: '#EF7B00', pointShape:'circle'}},
+                width: 800, height: 300
             };
 
             var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
