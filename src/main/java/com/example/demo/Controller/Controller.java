@@ -8,14 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @org.springframework.stereotype.Controller
 @AllArgsConstructor
 public class Controller {
-    @GetMapping("/test")
+    @GetMapping("/monitor")
     public String test(){
-        return "test";
-    }
-
-    @GetMapping("/demo")
-    public String demo(){
-        return "index2";
+        return "monitor";
     }
 
 }
