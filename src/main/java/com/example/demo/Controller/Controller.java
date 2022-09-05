@@ -13,4 +13,9 @@ public class Controller {
         return "monitor";
     }
 
+    @GetMapping("/main")
+    public String main(){
+        return "index";
+    }
+
 }
