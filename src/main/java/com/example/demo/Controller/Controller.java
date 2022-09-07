@@ -18,4 +18,14 @@ public class Controller {
         return "index";
     }
 
+    @GetMapping("/info")
+    public String info(){
+        return "index_info";
+    }
+
+    @GetMapping("/info_b")
+    public String info_b(){
+        return "index_b";
+    }
+
 }
