@@ -305,7 +305,7 @@
 #menu_wrap .option p {margin:10px 0;}
 #menu_wrap .option button {margin-left:5px;}
 
-#select_b {position:absolute;top:60%;left:80%;bottom:0;width:300px;height:300px;margin:10px 0 30px 10px;padding:1%;overflow-y:auto;z-index: 1;background-color:#F4F4F4;font-size:12px;border-radius: 10px; text-align: center;}
+#select_b {position:absolute;top:60%;left:80%;bottom:0;width:300px;height:300px;margin:10px 0 30px 10px;padding:1%;overflow-y:auto;z-index: 1;background-color:#F4F4F4;font-size:12px;border-radius: 10px; text-align: center;box-shadow: 3px 3px 10px 0px darkgrey;}
 #select_b .option{text-align: center;}
 #select_b .option p {margin:10px 0;}
 #select_b .option button {margin-left:5px;}
