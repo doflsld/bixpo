@@ -123,11 +123,11 @@
                         <tbody>
                             <tr>
                                 <th>온도</th>
-                                <td>23.4℃</td>
+                                <td><p class="ran temp">23.4℃</p></td>
                             </tr>
                             <tr>
                                 <th>습도</th>
-                                <td>31%</td>
+                                <td><p class="ran hum">31%</p></td>
                             </tr>
                             <tr>
                                 <th>오프가스</th>
@@ -144,11 +144,11 @@
                         <tbody>
                         <tr>
                             <th>온도</th>
-                            <td>29.0℃</td>
+                            <td><p class="ran temp">29.0℃</p></td>
                         </tr>
                         <tr>
                             <th>습도</th>
-                            <td>40%</td>
+                            <td><p class="ran hum">40%</p></td>
                         </tr>
                         </tbody>
                     </table>
@@ -190,8 +190,6 @@
 <script src="../static/theme/lib/tempusdominus/js/moment.min.js"></script>
 <script src="../static/theme/lib/tempusdominus/js/moment-timezone.min.js"></script>
 <script src="../static/theme/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-<script src="../static/js/index.js"></script>
-<script src="../static/js/chart.js"></script>
 <script>
     var clockFun = (function (){
         var clock = new Vue({
@@ -309,6 +307,33 @@
     // kakao.maps.event.addListener(marker2, 'click', function() {
     //     location.href="";
     // });
+</script>
+<script>
+    var delay = 5000; // 1000ms = 1 second
+
+    function hum(){
+        var humidity = Math.floor((Math.random() * (60-40)) + 40);
+        return humidity+"%";
+    }
+    function temp(){
+        var temp = (Math.random() * (29-27)) + 27;
+        temp = temp.toFixed(1);
+        return temp+"℃";
+    }
+
+    function pulse(){
+        $(".hum").each(function(){
+            var color = hum();
+            $(this).text(color);
+        });
+        $(".temp").each(function(){
+            var color = temp();
+            $(this).text(color);
+        });
+    }
+
+
+    var fire = setInterval(pulse, delay);
 </script>
 </body>
 

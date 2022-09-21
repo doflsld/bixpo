@@ -325,3 +325,7 @@
 #checks input[type="radio"] + label:active:before, #checks input[type="radio"]:checked + label:active:before {}
 #checks input[type="radio"]:checked + label:before {}
 #checks input[type="radio"]:checked + label:after {content:'✔'; position:absolute; top: 0px; left: 3px; width: 10px; height: 10px; font-size: 15px }
+
+.ran{font-size: small;
+    text-align: center;
+    display: inline-block;}
