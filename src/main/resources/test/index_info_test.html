@@ -323,17 +323,13 @@
 
     function pulse(){
         $(".hum").each(function(){
-            var color = hum();
-            $(this).text(color);
+            $(this).text(hum());
         });
         $(".temp").each(function(){
-            var color = temp();
-            $(this).text(color);
+            $(this).text(temp());
         });
     }
-
-
-    var fire = setInterval(pulse, delay);
+    setInterval(pulse, delay);
 </script>
 </body>
 

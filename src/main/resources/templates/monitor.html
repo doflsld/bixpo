@@ -87,44 +87,41 @@
         <!-- Navbar End -->
 
         <div class="text-center w-100 pt-2">
-            <div class="d-inline-grid w-40 h-100">
-                <div class="container-fluid pt-4 px-4">
-                    <div class="bg-primary rounded p-4 text-start" style="height: 85.5vh;">
-                        <h4 class="d-inline-grid text-secondary w-100">사용 후 배터리 분류 프로세스</h4>
-                        <img class="d-inline-grid pt-4 ms-4 w-50 my-4" src="../asset/images/s-images/process.png">
-                    </div>
+            <div class="d-inline-grid w-40 p-4">
+                <div class="bg-primary rounded p-4 text-start">
+                    <h4 class="d-inline-grid text-secondary w-100">사용 후 배터리 분류 프로세스</h4>
+                    <img class="d-inline-grid ms-4 w-auto my-4" style="height: 670px;" src="../asset/images/s-images/process.png">
                 </div>
             </div>
-            <div class="d-inline-grid w-55">
-                <div class="container-fluid p-4 mb-1">
-                    <div class="bg-primary rounded p-4 h-100">
-                        <div class="text-start">
-                            <h4 class="d-inline-grid text-secondary">보관 중인 사용 후 배터리 상태 확인</h4>
-                        </div>
-                        <div class="d-inline-grid mx-4 mt-5">
-                            <div class="status normal fw-bolder">371</div>
-                            <h5 class="text-black-50 mt-5">안전배터리</h5>
-                        </div>
-                        <div class="d-inline-grid mx-4 mt-5">
-                            <div class="status caution fw-bolder">003</div>
-                            <h5 class="text-black-50 mt-5">주의배터리</h5>
-                        </div>
-                        <div class="d-inline-grid mx-4 mt-5">
-                            <div class="status warning fw-bolder">001</div>
-                            <h5 class="text-black-50 mt-5">위험배터리</h5>
-                        </div>
+
+            <div class="d-inline-grid w-55 p-4">
+                <div class="bg-primary rounded p-4">
+                    <div class="text-start">
+                        <h4 class="d-inline-grid text-secondary">보관 중인 사용 후 배터리 상태 확인</h4>
+                    </div>
+                    <div class="d-inline-grid mx-4 mt-5">
+                        <div class="status normal fw-bolder">371</div>
+                        <h5 class="text-black-50 mt-5">안전배터리</h5>
+                    </div>
+                    <div class="d-inline-grid mx-4 mt-5">
+                        <div class="status caution fw-bolder">003</div>
+                        <h5 class="text-black-50 mt-5">주의배터리</h5>
+                    </div>
+                    <div class="d-inline-grid mx-4 mt-5">
+                        <div class="status warning fw-bolder">001</div>
+                        <h5 class="text-black-50 mt-5">위험배터리</h5>
                     </div>
                 </div>
-                <div class="container-fluid p-4 mt-1">
-                    <div class="bg-primary rounded p-4 h-100">
-                        <div class="text-start">
-                            <h5 class="d-td-inline-grid text-secondary">배터리 진단 후 안전 배터리 비율 (AI 분석 기반)</h5>
-                        </div>
-                        <div id="chart_div"></div>
+
+                <div class="bg-primary rounded p-4 h-100" style="margin-top: 1.72rem;">
+                    <div class="text-start">
+                        <h4 class="d-td-inline-grid text-secondary">배터리 진단 후 안전 배터리 비율 (AI 분석 기반)</h4>
                     </div>
+                    <div id="chart_div"></div>
                 </div>
             </div>
         </div>
+    </div>
 
         <!-- Footer Start -->
         <!--            <div class="container-fluid pt-4 px-4">-->
@@ -204,16 +201,16 @@
     function drawChart() {
         var data = google.visualization.arrayToDataTable([
             ['Date', 'Percent'],
-            ['03.29',  85],
-            ['03.30',  91],
-            ['03.31',  95],
-            ['04.01',  88],
-            ['04.02',  90],
-            ['04.03',  87],
-            ['04.04',  97],
-            ['04.05',  90],
-            ['04.06',  87],
-            ['04.07',  98]
+            ['09.13',  85],
+            ['09.14',  91],
+            ['09.15',  95],
+            ['09.16',  88],
+            ['09.17',  90],
+            ['09.18',  87],
+            ['09.19',  97],
+            ['09.20',  90],
+            ['09.21',  87],
+            ['09.22',  98]
         ]);
 
         var options = {
