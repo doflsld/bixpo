@@ -1,7 +1,6 @@
-
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         mapOption = {
-            center: new kakao.maps.LatLng(36.229744, 127.763545), // 지도의 중심좌표
+            center: new kakao.maps.LatLng(36.055079, 125.871189), // 지도의 중심좌표
             level: 12 // 지도의 확대 레벨
         };
 
@@ -41,9 +40,10 @@
     marker1.setMap(map);
     marker2.setMap(map);
 
-    kakao.maps.event.addListener(marker1, 'click', function() {
-        location.href="info";
-    });
-    kakao.maps.event.addListener(marker2, 'click', function() {
-        location.href="info";
-    });
+    // 마커 클릭 시 페이지 이동
+    // kakao.maps.event.addListener(marker1, 'click', function() {
+    //     location.href="";
+    // });
+    // kakao.maps.event.addListener(marker2, 'click', function() {
+    //     location.href="";
+    // });

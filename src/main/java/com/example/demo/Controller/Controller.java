@@ -23,7 +23,7 @@ public class Controller {
         return "index_info";
     }
 
-    @GetMapping("/info_b")
+    @GetMapping("/main_b")
     public String info_b(){
         return "index_b";
     }

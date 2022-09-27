@@ -72,11 +72,11 @@
     <!-- Content Start -->
     <div class="content">
         <!-- Navbar Start -->
-        <nav class="navbar navbar-expand bg-primary navbar-dark sticky-top px-4 py-0" style="box-shadow: 0px 3px 10px 0px gray;">
+        <nav class="navbar navbar-expand bg-primary navbar-dark sticky-top px-4 py-0 shadow">
             <img src="../asset/images/s-images/ba_title.png" style="width: 12%;">
 
             <div class="navbar-nav align-items-center ms-auto">
-                <div class="col-1" id="clock" style="color: #000000; text-align: center; margin-top: 18px; width: auto; margin: auto;">
+                <div class="col-1 w-auto m-auto text-center text-dark" id="clock">
                     <p class="m-2 fs-5">{{date}} {{time}}</p>
                 </div>
                 <div class="nav-item dropdown">
@@ -151,107 +151,19 @@
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../static/theme/lib/chart/chart.min.js"></script>
-<script src="../static/theme/lib/easing/easing.min.js"></script>
-<script src="../static/theme/lib/waypoints/waypoints.min.js"></script>
-<script src="../static/theme/lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="../static/theme/lib/tempusdominus/js/moment.min.js"></script>
-<script src="../static/theme/lib/tempusdominus/js/moment-timezone.min.js"></script>
-<script src="../static/theme/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-<script>
-    var clockFun = (function (){
-        var clock = new Vue({
-            el: '#clock',
-            data: {
-                time : '',
-                date : ''
-            }
-        });
-
-        var week = ['SUN','MON','TUE','WEN','THU','FRI','SAT'];
-
-        function updateTime() {
-            var cd = new Date();
-            if(cd.getHours() < 12){
-                clock.time = '오전 ' + zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2);
-                clock.date = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth() + 1, 2) + '-' + zeroPadding(cd.getDate(), 2);
-            }else{
-                clock.time = '오후 ' +zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2);
-                clock.date = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth() + 1, 2) + '-' + zeroPadding(cd.getDate(), 2);
-            }
-        }
-
-        function zeroPadding(num, digit){
-            var zero = '';
-            for (var i = 0; i < digit; i++){
-                zero += 0;
-            }
-            return (zero + num).slice(-digit);
-        }
-        return setInterval(updateTime, 1000);
-    }());
-</script>
+<script src="../theme/lib/chart/chart.min.js"></script>
+<script src="../theme/lib/easing/easing.min.js"></script>
+<script src="../theme/lib/waypoints/waypoints.min.js"></script>
+<script src="../theme/lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="../theme/lib/tempusdominus/js/moment.min.js"></script>
+<script src="../theme/lib/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="../theme/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Clock -->
+<script src="../js/clock.js"></script>
+<!--  Chart  -->
+<script src="../js/chart.js"></script>
 <!-- Template Javascript -->
 <script src="../theme/js/main.js"></script>
-<!--  Chart  -->
-<script type="text/javascript">
-    Highcharts.chart('chart_div', {
-        colors : ['#EF7B00'],
-        chart: {
-            type: 'area'
-        },
-        title: {
-            text: ' '
-        },
-        subtitle: {
-            // text: 'Source: ' +
-            // '<a href="https://www.ssb.no/en/statbank/table/09288/"' +
-            // 'target="_blank">SSB</a>'
-        },
-        xAxis: {
-            categories: ['09.13', '09.14', '09.15', '09.16', '09.17', '09.18', '09.19', '09.20', '09.21', '09.22']
-        },
-        yAxis: {
-            max: 100,
-            title: {
-                text: ' '
-            }
-        },
-        legend: {
-
-        },
-        // 하단 highchart.com 글씨 삭제
-        credits: {
-            enabled: false
-        },
-        // 상단 context menu 제거
-        exporting: {
-            enabled: false
-        },
-        tooltip: {
-            valueSuffix:'%'
-        },
-        plotOptions: {
-            series: {
-
-            },
-            area: {
-                stacking: 'normal',
-                lineColor: '#FFFFFF',
-                lineWidth: 1,
-                marker: {
-                    lineWidth: 1,
-                    lineColor: '#FFFFFF'
-                }
-            }
-        },
-        series: [{
-            name: 'Percent',
-            data: [85, 91, 95, 88, 90, 87, 97, 90, 87, 98]
-        }]
-    });
-</script>
-<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
 
 </html>

@@ -70,11 +70,11 @@
     <!-- Content Start -->
     <div class="content">
         <!-- Navbar Start -->
-        <nav class="navbar navbar-expand bg-primary navbar-dark sticky-top px-4 py-0" style="box-shadow: 0px 3px 10px 0px gray;">
+        <nav class="navbar navbar-expand bg-primary navbar-dark sticky-top px-4 py-0 shadow">
             <img src="../static/asset/images/s-images/ba_title.png" style="width: 12%;">
 
             <div class="navbar-nav align-items-center ms-auto">
-                <div class="col-1" id="clock" style="color: #000000; text-align: center; margin-top: 18px; width: auto; margin: auto;">
+                <div class="col-1 w-auto m-auto text-center text-dark" id="clock">
                     <p class="m-2 fs-5">{{date}} {{time}}</p>
                 </div>
                 <div class="nav-item dropdown">
@@ -190,73 +190,9 @@
 <script src="../static/theme/lib/tempusdominus/js/moment.min.js"></script>
 <script src="../static/theme/lib/tempusdominus/js/moment-timezone.min.js"></script>
 <script src="../static/theme/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-<script>
-    var clockFun = (function (){
-        var clock = new Vue({
-            el: '#clock',
-            data: {
-                time : '',
-                date : ''
-            }
-        });
-
-        var week = ['SUN','MON','TUE','WEN','THU','FRI','SAT'];
-
-        function updateTime() {
-            var cd = new Date();
-            if(cd.getHours() < 12){
-                clock.time = '오전 ' + zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2);
-                clock.date = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth() + 1, 2) + '-' + zeroPadding(cd.getDate(), 2);
-            }else{
-                clock.time = '오후 ' +zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2);
-                clock.date = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth() + 1, 2) + '-' + zeroPadding(cd.getDate(), 2);
-            }
-        }
-
-        function zeroPadding(num, digit){
-            var zero = '';
-            for (var i = 0; i < digit; i++){
-                zero += 0;
-            }
-            return (zero + num).slice(-digit);
-        }
-        return setInterval(updateTime, 1000);
-    }());
-</script>
-<!-- Template Javascript -->
-<script src="../statics/theme/js/main.js"></script>
-<!--  Chart  -->
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-    google.charts.load('current', {'packages':['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
-
-    function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-            ['Date', 'Percent'],
-            ['03.29',  85],
-            ['03.30',  91],
-            ['03.31',  95],
-            ['04.01',  88],
-            ['04.02',  90],
-            ['04.03',  87],
-            ['04.04',  97],
-            ['04.05',  90],
-            ['04.06',  87],
-            ['04.07',  98]
-        ]);
-
-        var options = {
-            vAxis: {minValue: 0},
-            legend : 'none',
-            series: {0:{lineWidth: 1, pointSize:4, color: '#EF7B00', pointShape:'circle'}},
-            width: 800, height: 300
-        };
-
-        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-    }
-</script>
+<!-- Clock -->
+<script src="../static/js/clock.js"></script>
+<!-- Map -->
 <script>
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         mapOption = {
@@ -308,29 +244,8 @@
     //     location.href="";
     // });
 </script>
-<script>
-    var delay = 5000; // 1000ms = 1 second
-
-    function hum(){
-        var humidity = Math.floor((Math.random() * (60-40)) + 40);
-        return humidity+"%";
-    }
-    function temp(){
-        var temp = (Math.random() * (26-23)) + 23;
-        temp = temp.toFixed(1);
-        return temp+"℃";
-    }
-
-    function pulse(){
-        $(".hum").each(function(){
-            $(this).text(hum());
-        });
-        $(".temp").each(function(){
-            $(this).text(temp());
-        });
-    }
-    setInterval(pulse, delay);
-</script>
+<!-- Template Javascript -->
+<script src="../static/theme/js/main.js"></script>
 </body>
 
 </html>
