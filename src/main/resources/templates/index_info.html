@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <title>BSB 통합관제시스템</title>
@@ -53,13 +52,13 @@
     <!-- Sidebar Start -->
     <div class="sidebar pe-4 pb-3">
         <div class="">
-            <a href="main" class="navbar-brand mx-4 mb-3">
+            <a href="/main" class="navbar-brand mx-4 mb-3">
                 <h4 class="text-primary">BSB 통합관제시스템</h4>
             </a>
 
             <div class="navbar-nav w-100">
-                <a href="main" class="nav-item nav-link active"><i class="bi bi-geo-alt-fill me-2"></i></i>위치관제</a>
-                <a href="monitor" class="nav-item nav-link"><i class="bi bi-building me-2"></i>운송지관리</a>
+                <a href="/main" class="nav-item nav-link active"><i class="bi bi-geo-alt-fill me-4"></i></i>Location</a>
+                <a href="/monitor" class="nav-item nav-link"><i class="bi bi-file-bar-graph-fill me-4"></i>Information</a>
             </div>
         </div>
     </div>
@@ -122,11 +121,11 @@
                         <tbody>
                         <tr>
                             <th>온도</th>
-                            <td><p class="ran temp">23.4℃</p></td>
+                            <td><p class="ran temp"></p></td>
                         </tr>
                         <tr>
                             <th>습도</th>
-                            <td><p class="ran hum">31%</p></td>
+                            <td><p class="ran humi"></p></td>
                         </tr>
                         <tr>
                             <th>오프가스</th>
@@ -137,21 +136,22 @@
                 </div>
                 <div class="bg-primary mt-2 p-4 w-45 rounded d-inline-grid">
                     <div class="rounded text-start pb-4">
-                        <p class="d-inline-grid text-secondary fs-5 fw-bold w-100">날씨</p>
+                        <p class="d-inline-grid text-secondary fs-5 fw-bold w-100">현재 위치 날씨</p>
                     </div>
                     <table class="info-table">
                         <tbody>
                         <tr>
                             <th>온도</th>
-                            <td><p class="ran temp">29.0℃</p></td>
+                            <td><p class="ran temp">17.4℃</p></td>
                         </tr>
                         <tr>
                             <th>습도</th>
-                            <td><p class="ran hum">40%</p></td>
+                            <td><p class="ran humi">30%</p></td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
+
             </div>
         </div>
 
@@ -197,6 +197,9 @@
 <script src="../js/ran_data.js"></script>
 <!-- Template Javascript -->
 <script src="../theme/js/main.js"></script>
+<script>
+
+</script>
 </body>
 
 </html>

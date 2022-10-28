@@ -1,0 +1,13 @@
+#spring:
+#  datasource:
+#    url: jdbc:mysql://ba-prd-db.c77o6fqox9sm.ap-northeast-2.rds.amazonaws.com:3306
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: admin
+#    password: 1Baenergy123!
+#
+#  ssh:
+#    remote_jump_host: 43.200.255.227        # ssh 연결할 중간 서버 주소
+#    ssh_port: 22                            # ssh 프로토콜 포트
+#    user: ec2-user                          # ssh 연결할 사용자 계정
+#    private_key: ../ba-prd-key.pem          # ssh 연결 시 사용할 개인키 파일 경로
+#    database_port: 3306                     # 원격서버에 있는 db 포트

@@ -58,8 +58,8 @@
             </a>
 
             <div class="navbar-nav w-100">
-                <a href="index_test.html" class="nav-item nav-link active"><i class="bi bi-geo-alt-fill me-2"></i></i>위치관제</a>
-                <a href="monitor_test.html" class="nav-item nav-link"><i class="bi bi-building me-2"></i>운송지관리</a>
+                <a href="index_test.html" class="nav-item nav-link active"><i class="bi bi-geo-alt-fill me-4"></i></i>Location</a>
+                <a href="monitor_test.html" class="nav-item nav-link"><i class="bi bi-file-bar-graph-fill me-4"></i>Information</a>
             </div>
         </div>
     </div>
@@ -86,14 +86,14 @@
             </div>
         </nav>
         <!-- Navbar End -->
-        <div class="map_wrap w-100" style="height: 92.5%">
+        <div class="map_wrap w-100" style="height: 94%">
             <div id="map" class="h-100 position-relative overflow-hidden"></div>
-            <div id="menu_wrap" class="w-40">
+            <div id="menu_wrap">
                 <div class="bg-primary mb-4 p-4 w-100 rounded">
                     <div class="rounded text-start pb-4">
                         <p class="d-inline-grid text-secondary fs-5 fw-bold w-100">배터리 정보</p>
                     </div>
-                    <table class="info-table">
+                    <table id="table-btr" class="info-table">
                         <thead>
                         <tr>
                             <th>모델</th>
@@ -114,7 +114,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="bg-primary mt-2 me-3 p-4 w-50 rounded d-inline-grid">
+                <div class="bg-primary p-4 w-50 rounded d-inline-grid">
                     <div class="rounded text-start pb-4">
                         <p class="d-inline-grid text-secondary fs-5 fw-bold w-100">BSB 실내 환경정보</p>
                     </div>
@@ -122,35 +122,46 @@
                         <tbody>
                         <tr>
                             <th>온도</th>
-                            <td><p class="ran temp">23.4℃</p></td>
+                            <td><p class="sens sensTemp"></p></td>
                         </tr>
                         <tr>
                             <th>습도</th>
-                            <td><p class="ran hum">31%</p></td>
+                            <td><p class="sens sensHumi"></p></td>
                         </tr>
                         <tr>
-                            <th>오프가스</th>
-                            <td>GOOD</td>
+                            <th>CO</th>
+                            <td><p class="sens sensCO"></td>
+                        </tr>
+                        <tr>
+                            <th>H2</th>
+                            <td><p class="sens sensH2"></td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="bg-primary mt-2 p-4 w-45 rounded d-inline-grid">
+                <div class="bg-primary p-4 w-45 rounded d-inline-grid weather">
                     <div class="rounded text-start pb-4">
-                        <p class="d-inline-grid text-secondary fs-5 fw-bold w-100">날씨</p>
+                        <p class="d-inline-grid text-secondary fs-5 fw-bold w-100">현재 위치 날씨</p>
                     </div>
-                    <table class="info-table">
+
+                    <table id="table-weather">
                         <tbody>
                         <tr>
-                            <th>온도</th>
-                            <td><p class="ran temp">29.0℃</p></td>
+                            <th style="width: 40%"><i class="bi bi-thermometer-half fs-3"></i></th>
+                            <td><p class="ran CurrTemp fs-5"></p></td>
                         </tr>
                         <tr>
-                            <th>습도</th>
-                            <td><p class="ran hum">40%</p></td>
+                            <th><i class="bi bi-droplet-half fs-3"></i></th>
+                            <td><p class="ran CurrHumi fs-5"></p></td>
                         </tr>
                         </tbody>
                     </table>
+                </div>
+
+                <div class="bg-primary mt-4 p-4 w-100 rounded">
+                    <div class="rounded text-start pb-4">
+                        <p class="d-inline-grid text-secondary fs-5 fw-bold w-100">배터리 정보</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -195,6 +206,10 @@
 <script src="../js/map_info.js"></script>
 <!-- Random data -->
 <script src="../js/ran_data.js"></script>
+<!-- Weather -->
+<script src="../js/weather.js"></script>
+<!-- Data -->
+<script src="../js/data.js"></script>
 <!-- Template Javascript -->
 <script src="../theme/js/main.js"></script>
 </body>

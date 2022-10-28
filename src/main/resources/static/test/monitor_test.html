@@ -61,8 +61,8 @@
             </a>
 
             <div class="navbar-nav w-100">
-                <a href="index_test.html" class="nav-item nav-link active"><i class="bi bi-geo-alt-fill me-2"></i></i>위치관제</a>
-                <a href="#" class="nav-item nav-link"><i class="bi bi-building me-2"></i>운송지관리</a>
+                <a href="index_test.html" class="nav-item nav-link active"><i class="bi bi-geo-alt-fill me-4"></i></i>Location</a>
+                <a href="monitor_test.html" class="nav-item nav-link"><i class="bi bi-file-bar-graph-fill me-4"></i>Information</a>
             </div>
         </div>
     </div>
@@ -91,34 +91,22 @@
         <!-- Navbar End -->
 
         <div class="text-center w-100 pt-2">
-            <div class="d-inline-grid w-40 p-4">
-                <div class="bg-primary rounded p-4 text-start">
-                    <h4 class="d-inline-grid text-secondary w-100">사용 후 배터리 분류 프로세스</h4>
-                    <img class="d-inline-grid ms-4 w-50 my-4" src="../asset/images/s-images/process.png">
-                </div>
+            <div class="text-start ps-4 pt-4">
+                <select id="btr-slt">
+                    <option>배터리 일련번호</option>
+                </select>
             </div>
-
-            <div class="d-inline-grid w-55 p-4">
+            <div class="d-inline-grid w-100 p-4 mt-5">
                 <div class="bg-primary rounded p-4">
-                    <div class="text-start">
-                        <h4 class="d-inline-grid text-secondary">보관 중인 사용 후 배터리 상태 확인</h4>
-                    </div>
-                    <div class="status-div">
-                        <div class="status normal fw-bolder">371</div><p>안전배터리</p>
-                    </div>
-                    <div class="status-div">
-                        <div class="status caution fw-bolder">003</div><p>주의배터리</p>
-                    </div>
-                    <div class="status-div">
-                        <div class="status warning fw-bolder">001</div><p>위험배터리</p>
+                    <div class="text-start pb-2">
+                        <h4 class="d-inline-grid text-secondary">전압</h4>
                     </div>
                 </div>
 
-                <div class="bg-primary rounded p-4 mt-4 text-center">
-                    <div class="text-start">
-                        <h4 class="d-td-inline-grid text-secondary">배터리 진단 후 안전 배터리 비율 (AI 분석 기반)</h4>
+                <div class="bg-primary rounded w-100 p-4 mt-4 text-center">
+                    <div class="text-start pb-2">
+                        <h4 class="d-td-inline-grid text-secondary">전류</h4>
                     </div>
-                    <div class="d-inline-grid" id="chart_div"></div>
                 </div>
             </div>
         </div>
