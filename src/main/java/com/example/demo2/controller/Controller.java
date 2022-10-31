@@ -1,6 +1,7 @@
 package com.example.demo2.controller;
 
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @org.springframework.stereotype.Controller
@@ -17,7 +18,7 @@ public class Controller {
     }
 
     @GetMapping("/info")
-    public String info(Model model){
+    public String info(){
         return "index_info.html";
     }
 
