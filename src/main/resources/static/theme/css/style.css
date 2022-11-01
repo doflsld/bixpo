@@ -308,8 +308,7 @@
         font-weight: bold;
         margin-top: 1rem;
     }
-    #chart_div{
-        width: 600px;
+    .chart{
         height: 174px;
     }
 }
@@ -336,10 +335,9 @@
         margin-top: 1rem;
     }
 
-    #chart_div{
+    .chart{
         margin-top: 3.2rem;
-        width: 800px;
-        height: 250px;
+        height: 15rem;
     }
 }
 
@@ -448,7 +446,7 @@ body::-webkit-scrollbar{display: none;}
 
 #btr-slt{
     width: 200px;
-    padding: .8em .5em;
+    padding: .5em .5em;
     background: url('/asset/images/s-images/arrow.png') no-repeat center right 10px;
     background-size: 20px;
     border: black solid 2px;

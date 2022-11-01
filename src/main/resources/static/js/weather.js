@@ -6,7 +6,7 @@ function weather(){
     var $lon = 126.840188;
 
     $.ajax({
-        url: 'http://api.openweathermap.org/data/2.5/weather?lat='+$lat+'&lon='+$lon+'&appid='+$APP_KEY+'&units=metric',
+        url: 'https://api.openweathermap.org/data/2.5/weather?lat='+$lat+'&lon='+$lon+'&appid='+$APP_KEY+'&units=metric',
         dataType: 'json',
         type: 'GET',
         success: function (data){

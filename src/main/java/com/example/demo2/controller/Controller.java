@@ -1,10 +1,13 @@
 package com.example.demo2.controller;
 
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @org.springframework.stereotype.Controller
+@CrossOrigin(origins = "*")
 public class Controller {
 
     @GetMapping("/monitor")
