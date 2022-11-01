@@ -308,6 +308,10 @@
         font-weight: bold;
         margin-top: 1rem;
     }
+    #chart_div{
+        width: 600px;
+        height: 174px;
+    }
     .chart{
         height: 174px;
     }
@@ -329,10 +333,27 @@
         margin-right: 3rem;
         margin-left: 3rem;
     }
+    .status-div-info {
+        display: inline-grid;
+        margin-bottom: 1.5rem !important;
+        margin-left: 1rem !important;
+        margin-right: 1rem !important;
+    }
     .status-div p{
         font-size: 22px;
         font-weight: bold;
         margin-top: 1rem;
+    }
+    .status-div-info p{
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 2rem;
+    }
+
+    #chart_div{
+        margin-top: 3.2rem;
+        width: 800px;
+        height: 300px;
     }
 
     .chart{
@@ -344,6 +365,7 @@
 .normal{border: 10px solid #2CB86D;}
 .caution{border: 10px solid #F49D34;}
 .warning{border: 10px solid #F84646;}
+.null{border: 10px solid lightgray}
 
 body{-ms-overflow-style: none; scrollbar-width: none;}
 body::-webkit-scrollbar{display: none;}

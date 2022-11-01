@@ -7,6 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <!-- Favicon -->
     <link href="../theme/img/favicon.ico" rel="icon">
@@ -44,13 +45,13 @@
 
 <body onload=printUpdate(); style="background: #f3f3f3;">
 <div class="container-fluid position-relative d-flex p-0">
-    <!-- Spinner Start -->
+<!--     Spinner Start
     <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
-    <!-- Spinner End -->
+     Spinner End -->
 
 
     <!-- Sidebar Start -->
@@ -61,8 +62,8 @@
             </a>
 
             <div class="navbar-nav w-100">
-                <a href="index_test.html" class="nav-item nav-link active"><i class="bi bi-geo-alt-fill me-2"></i></i>위치관제</a>
-                <a href="#" class="nav-item nav-link"><i class="bi bi-building me-2"></i>운송지관리</a>
+                <a href="index_test.html" class="nav-item nav-link active"><i class="bi bi-geo-alt-fill me-4"></i></i>Location</a>
+                <a href="monitor_test_fail.html" class="nav-item nav-link"><i class="bi bi-file-bar-graph-fill me-4"></i>Information</a>
             </div>
         </div>
     </div>
@@ -91,34 +92,23 @@
         <!-- Navbar End -->
 
         <div class="text-center w-100 pt-2">
-            <div class="d-inline-grid w-40 p-4">
-                <div class="bg-primary rounded p-4 text-start">
-                    <h4 class="d-inline-grid text-secondary w-100">사용 후 배터리 분류 프로세스</h4>
-                    <img class="d-inline-grid ms-4 my-4" style="width: 63%;" src="../asset/images/s-images/process.png">
-                </div>
+            <div class="text-start ps-4 pt-4">
+                <select id="btr-slt">
+                    <option>배터리 일련번호</option>
+                </select>
             </div>
-
-            <div class="d-inline-grid w-55 p-4" style="height: 62rem;">
-                <div class="bg-primary rounded p-4">
-                    <div class="text-start mb-4">
-                        <h4 class="d-inline-grid text-secondary">보관 중인 사용 후 배터리 상태 확인</h4>
-                    </div>
-                    <div class="status-div">
-                        <div class="status normal fw-bolder">371</div><p>안전배터리</p>
-                    </div>
-                    <div class="status-div">
-                        <div class="status caution fw-bolder">003</div><p>주의배터리</p>
-                    </div>
-                    <div class="status-div">
-                        <div class="status warning fw-bolder">001</div><p>위험배터리</p>
+            <div class="d-inline-grid w-100 p-4 mt-5">
+                <div class="bg-primary rounded p-4 mb-2">
+                    <div class="text-start pb-2 pt-4">
+                        <h4 class="d-inline-grid text-secondary">전압</h4>
+                        <div class="chart" id="chart_voltage"></div>
                     </div>
                 </div>
-
-                <div class="bg-primary rounded p-4 mt-4 text-center">
-                    <div class="text-start mb-4">
-                        <h4 class="d-td-inline-grid text-secondary">배터리 진단 후 안전 배터리 비율 (AI 분석 기반)</h4>
+                <div class="bg-primary rounded w-100 p-4 mt-4 text-center">
+                    <div class="text-start pb-2 pt-4">
+                        <h4 class="d-td-inline-grid text-secondary">전류</h4>
+                        <div class="chart w-auto" id="chart_current"></div>
                     </div>
-                    <div class="d-inline-grid" id="chart_div"></div>
                 </div>
             </div>
         </div>
@@ -161,9 +151,8 @@
 <!-- Clock -->
 <script src="../js/clock.js"></script>
 <!--  Chart  -->
-<script src="../js/chart.js"></script>
-<!-- Template Javascript -->
-<script src="../theme/js/main.js"></script>
+<script src="../js/chart_current.js"></script>
+<script src="../js/chart_voltage.js"></script>
 </body>
 
 </html>

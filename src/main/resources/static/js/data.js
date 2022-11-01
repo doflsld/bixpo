@@ -1,22 +1,6 @@
 function test(){
 
-/*    $.getJSON('http://121.178.2.4/api/batsens_api.php?modem=srcb00004_t&callback=',
-        function (data){
-            $.each(data,function (){
-                $('.sensTemp').prepend(this.temp);
-                $('.sensHumi').prepend(this.humi);
-            });
-        });
-
-    $.getJSON('http://121.178.2.4/api/batsens_api.php?modem=srcb00005_t&callback=',
-        function (data){
-            $.each(data,function (){
-                $('.sensCO').prepend(this.co);
-                $('.sensH2').prepend(this.h2);
-            });
-        });*/
-
-    $.getJSON('http://121.178.2.4/api/batsens_api.php?modem=srcb00004_t&callback=?',
+/*    $.getJSON('http://121.178.2.4/api/batsens_api.php?modem=srcb00004_t&callback=?',
         function (data){
                 $('.sensTemp').prepend(data.temp);
                 $('.sensHumi').prepend(data.humi);
@@ -25,25 +9,26 @@ function test(){
         function (data){
                 $('.sensCO').prepend(data.co);
                 $('.sensH2').prepend(data.h2);
-            });
+            });*/
 
-/*    $.ajax({
+    $.ajax({
         type : 'GET',
         url: 'http://121.178.2.4/api/batsens_api.php?modem=srcb00004_t',
         dataType: 'jsonp',
-        crossDomain: true,
         jsonpCallback: 'callback',
         success: function (data){
-            console.log(data);
-/!*            var $Temp = (data.temp).toFixed(2);
+            $.each(data, function(k, v){
+                $("#sensTemp").append(k+":"+v);
+            })
+/*            var $Temp = (data.temp).toFixed(2);
             var $Humi = (data.humi).toFixed(2);
             $('.sensTemp').prepend($Temp);
-            $('.sensHumi').prepend($Humi);*!/
+            $('.sensHumi').prepend($Humi);*/
         },
         error: function(status, msg){
             console.log(status, msg);
         }
-    });*/
+    });
 
 /*    $.ajax({
         type : 'GET',

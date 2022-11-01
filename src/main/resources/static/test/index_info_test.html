@@ -59,7 +59,7 @@
 
             <div class="navbar-nav w-100">
                 <a href="index_test.html" class="nav-item nav-link active"><i class="bi bi-geo-alt-fill me-4"></i></i>Location</a>
-                <a href="monitor_test.html" class="nav-item nav-link"><i class="bi bi-file-bar-graph-fill me-4"></i>Information</a>
+                <a href="monitor_test_fail.html" class="nav-item nav-link"><i class="bi bi-file-bar-graph-fill me-4"></i>Information</a>
             </div>
         </div>
     </div>
@@ -89,7 +89,7 @@
         <div class="map_wrap w-100" style="height: 94%">
             <div id="map" class="h-100 position-relative overflow-hidden"></div>
             <div id="menu_wrap">
-                <div class="bg-primary mb-4 p-4 w-100 rounded">
+                <div class="bg-primary mb-4 p-4 w-100 rounded mt-2">
                     <div class="rounded text-start pb-4">
                         <p class="d-inline-grid text-secondary fs-5 fw-bold w-100">배터리 정보</p>
                     </div>
@@ -122,19 +122,21 @@
                         <tbody>
                         <tr>
                             <th>온도</th>
-                            <td><p class="sens sensTemp"></p></td>
+                            <td>
+                                <p th:text="${tests.temp}"></p>
+                            </td>
                         </tr>
                         <tr>
                             <th>습도</th>
-                            <td><p class="sens sensHumi"></p></td>
+                            <td><p th:text="${tests.humi}"></p></td>
                         </tr>
                         <tr>
                             <th>CO</th>
-                            <td><p class="sens sensCO"></td>
+                            <td><p th:text="${testg.co}"></p></td>
                         </tr>
                         <tr>
                             <th>H2</th>
-                            <td><p class="sens sensH2"></td>
+                            <td><p th:text="${testg.h2}"></td>
                         </tr>
                         </tbody>
                     </table>
@@ -157,18 +159,25 @@
                         </tbody>
                     </table>
                 </div>
-
                 <div class="bg-primary mt-4 p-4 w-100 rounded">
                     <div class="rounded text-start pb-4">
-                        <p class="d-inline-grid text-secondary fs-5 fw-bold w-100">배터리 정보</p>
+                        <p class="d-inline-grid text-secondary fs-5 fw-bold w-100 pb-4">안전현황</p>
+                    </div>
+                    <div class="status-div-info">
+                        <div class="status normal fw-bolder"></div><p>안전</p>
+                    </div>
+                    <div class="status-div-info">
+                        <div class="status null fw-bolder"></div><p>주의</p>
+                    </div>
+                    <div class="status-div-info">
+                        <div class="status null fw-bolder"></div><p>위험</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Footer Start -->
-        <!--            <div class="container-fluid pt-4 px-4">-->
-        <!--                <div class="bg-secondary rounded-top p-4">-->
+        <!--                          <div class="bg-secondary rounded-top p-4">-->
         <!--                    <div class="row">-->
         <!--                        <div class="col-12 col-sm-6 text-center text-sm-start">-->
         <!--                            &copy; <a href="#">Your Site Name</a>, All Right Reserved. -->
