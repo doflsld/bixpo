@@ -311,9 +311,9 @@
         width: 600px;
         height: 174px;
     }
-    .chart{
+/*    .chart{
         height: 174px;
-    }
+    }*/
 }
 @media screen and (min-height: 900px){
     .status {
@@ -353,10 +353,10 @@
         width: 800px;
         height: 300px;
     }
-    .chart{
+/*    .chart{
         margin-top: 3.2rem;
         height: 15rem;
-    }
+    }*/
 }
 
 .normal{border: 10px solid #2CB86D;}
