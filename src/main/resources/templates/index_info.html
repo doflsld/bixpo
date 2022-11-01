@@ -124,7 +124,7 @@
                         <tr>
                             <th>온도</th>
                             <td>
-                                <p th:text="${tests.temp}"></p>
+                                <p id="sensTemp" th:text="${tests.temp}"></p>
                             </td>
                         </tr>
                         <tr>
@@ -219,6 +219,17 @@
 <script src="../js/ran_data.js"></script>
 <!-- Weather -->
 <script src="../js/weather.js"></script>
+<script>
+    function test(){
+        document.getElementById('sensTemp')
+    }
+
+    $(document).ready(test());
+
+        var delay = 5000;
+        var fire = setInterval(test, delay);
+
+</script>
 </body>
 
 </html>
