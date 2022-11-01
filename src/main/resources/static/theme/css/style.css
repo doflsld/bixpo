@@ -349,13 +349,11 @@
         font-weight: bold;
         margin-top: 2rem;
     }
-
     #chart_div{
         margin-top: 3.2rem;
         width: 800px;
         height: 300px;
     }
-
     .chart{
         margin-top: 3.2rem;
         height: 15rem;
